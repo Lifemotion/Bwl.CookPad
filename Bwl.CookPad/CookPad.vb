@@ -1,4 +1,6 @@
-﻿Public Class CookPad
+﻿Imports System.Drawing.Printing
+
+Public Class CookPad
     Private _components As IngredientsParser
     Private _receiptParser As ReceiptParser
     Private _basePath As String = IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "OneDrive\CookPad")
@@ -69,5 +71,17 @@
         tbRecipe.LoadFromString("")
         _receiptFile = ""
         _receiptChanged = False
+    End Sub
+
+    Private Sub А5ToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub ПечататьToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ПечататьToolStripMenuItem.Click
+        Dim pd As New PrintDocument
+        AddHandler pd.PrintPage, Sub(s As Object, pe As PrintPageEventArgs)
+                                     pe.Graphics.DrawImage(tbRecipe.TextBoxBitmap, 0, 0)
+                                 End Sub
+        pd.Print()
     End Sub
 End Class
