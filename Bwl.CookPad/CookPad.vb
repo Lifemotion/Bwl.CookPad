@@ -1,7 +1,7 @@
 ﻿Public Class CookPad
     Private _components As IngredientsParser
     Private _receiptParser As ReceiptParser
-    Private _basePath As String = IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "CookPad")
+    Private _basePath As String = IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "OneDrive\CookPad")
     Private _componentsFile As String = IO.Path.Combine(_basePath, "!Ингредиенты.txt")
     Private _receiptFile As String = ""
     Private _receiptChanged As Boolean
