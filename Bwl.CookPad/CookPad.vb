@@ -54,4 +54,20 @@
             tbRecipe.LoadFromString(IO.File.ReadAllText(_receiptFile))
         End If
     End Sub
+
+    Private Sub mOpenFolder_Click(sender As Object, e As EventArgs) Handles mOpenFolder.Click
+        Dim prc As New Process()
+        prc.StartInfo.FileName = "explorer"
+        prc.StartInfo.Arguments = "."
+        prc.StartInfo.WorkingDirectory = _basePath
+        prc.StartInfo.WindowStyle = ProcessWindowStyle.Normal
+        prc.Start()
+    End Sub
+
+    Private Sub mNewRecipe_Click(sender As Object, e As EventArgs) Handles mNewRecipe.Click
+        CloseRecipe()
+        tbRecipe.LoadFromString("")
+        _receiptFile = ""
+        _receiptChanged = False
+    End Sub
 End Class

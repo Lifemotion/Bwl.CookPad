@@ -27,9 +27,10 @@ Partial Class CookPad
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.РецептToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.СистемаToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ОткрытьПапкуСРецептамиToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mOpenFolder = New System.Windows.Forms.ToolStripMenuItem()
         Me.tbComponents = New Bwl.TextBoxEx.TextBoxEx()
         Me.tbRecipe = New Bwl.TextBoxEx.TextBoxEx()
+        Me.mNewRecipe = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,22 +57,23 @@ Partial Class CookPad
         '
         'РецептToolStripMenuItem
         '
+        Me.РецептToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mNewRecipe})
         Me.РецептToolStripMenuItem.Name = "РецептToolStripMenuItem"
         Me.РецептToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.РецептToolStripMenuItem.Text = "Рецепт"
         '
         'СистемаToolStripMenuItem
         '
-        Me.СистемаToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ОткрытьПапкуСРецептамиToolStripMenuItem})
+        Me.СистемаToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mOpenFolder})
         Me.СистемаToolStripMenuItem.Name = "СистемаToolStripMenuItem"
         Me.СистемаToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.СистемаToolStripMenuItem.Text = "Система"
         '
-        'ОткрытьПапкуСРецептамиToolStripMenuItem
+        'mOpenFolder
         '
-        Me.ОткрытьПапкуСРецептамиToolStripMenuItem.Name = "ОткрытьПапкуСРецептамиToolStripMenuItem"
-        Me.ОткрытьПапкуСРецептамиToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ОткрытьПапкуСРецептамиToolStripMenuItem.Text = "Открыть папку с рецептами"
+        Me.mOpenFolder.Name = "mOpenFolder"
+        Me.mOpenFolder.Size = New System.Drawing.Size(228, 22)
+        Me.mOpenFolder.Text = "Открыть папку с рецептами"
         '
         'tbComponents
         '
@@ -104,6 +106,12 @@ Partial Class CookPad
         Me.tbRecipe.TabIndex = 0
         Me.tbRecipe.TabSize = 4
         '
+        'mNewRecipe
+        '
+        Me.mNewRecipe.Name = "mNewRecipe"
+        Me.mNewRecipe.Size = New System.Drawing.Size(180, 22)
+        Me.mNewRecipe.Text = "Новый"
+        '
         'CookPad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -130,5 +138,6 @@ Partial Class CookPad
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents РецептToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents СистемаToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ОткрытьПапкуСРецептамиToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents mOpenFolder As ToolStripMenuItem
+    Friend WithEvents mNewRecipe As ToolStripMenuItem
 End Class
