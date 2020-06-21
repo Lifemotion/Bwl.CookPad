@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Bwl.CookPad", "Bwl.CookPad\Bwl.CookPad.vbproj", "{1A0C9392-6E9A-4088-AD26-A3E9D4C573A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A0C9392-6E9A-4088-AD26-A3E9D4C573A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0C9392-6E9A-4088-AD26-A3E9D4C573A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0C9392-6E9A-4088-AD26-A3E9D4C573A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0C9392-6E9A-4088-AD26-A3E9D4C573A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E2C1A8C-9DAE-4BBA-AF65-EC69C043F659}
+	EndGlobalSection
+EndGlobal
